@@ -3,7 +3,6 @@ class House:
         self.name=name                              # имя
         self.number_of_floors=number_of_floors      # кол-во этажей
 
-
     def go_to(self,new_floor):
             if new_floor <= self.number_of_floors:
                print("выбранный этаж : ")
@@ -14,6 +13,10 @@ class House:
                 print(f" этажа {new_floor} не существует")
 
             print("\n","\033[33m","_" * 20,"\033[0m")
+
+
+    def pr_line(self):
+        print("\033[33m","_" * 20,"\033[0m")     # разделитель
 
     def __len__(self):
         return self.number_of_floors
@@ -86,6 +89,7 @@ class House:
 
 
 
+
 #   неправильный выбор этажей :
 h1 = House('ЖК Горский', 18)
 print(f'объект {h1.name}, этажность {h1.number_of_floors}')
@@ -107,37 +111,37 @@ h2.go_to(2)
 
 # __str__
 print(h1,"\n",h2)
-print("\033[33m","_" * 20,"\033[0m")
+h1.pr_line()
 
 # __len__
 print(f'объект {h1.name} метод __len__',len(h1))
 print(f'объект {h2.name} метод __len__',len(h2))
 
 
-print("\033[33m","_" * 20,"\033[0m")
+h1.pr_line()
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
 
 print(h1,"\n",h2)
-print("\033[33m","_" * 20,"\033[0m")
+h1.pr_line()
 
 print("метод __eq__  ", h1 == h2)                  # __eq__
-print("\033[33m","_" * 20,"\033[0m")
+h1.pr_line()
 
 add_floor=10
 h1 = h1 + add_floor                              # __add__
 print(h1)
-print("\033[33m","_" * 20,"\033[0m")
+h1.pr_line()
 print("метод __eq__  ", h1 == h2)                  # __eq__
-print("\033[33m","_" * 20,"\033[0m")
+h1.pr_line()
 
 h1 += 10                                          # __iadd__
 print(h1)
-print("\033[33m","_" * 20,"\033[0m")
+h1.pr_line()
 
 h2 = 10 + h2                                      # __radd__
 print(h2)
-print("\033[33m","_" * 20,"\033[0m")
+h1.pr_line()
 
 print(h1 > h2) # __gt__
 print(h1 >= h2) # __ge__
