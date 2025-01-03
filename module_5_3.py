@@ -111,7 +111,7 @@ h2.go_to(2)
 
 # __str__
 print(h1,"\n",h2)
-h1.pr_line()
+h1.pr_line()                                   # разделитель
 
 # __len__
 print(f'объект {h1.name} метод __len__',len(h1))
@@ -123,25 +123,25 @@ h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
 
 print(h1,"\n",h2)
-h1.pr_line()
+h1.pr_line()                                   # разделитель
 
 print("метод __eq__  ", h1 == h2)                  # __eq__
-h1.pr_line()
+h1.pr_line()                                   # разделитель
 
 add_floor=10
 h1 = h1 + add_floor                              # __add__
 print(h1)
-h1.pr_line()
+h1.pr_line()                                   # разделитель
 print("метод __eq__  ", h1 == h2)                  # __eq__
-h1.pr_line()
+h1.pr_line()                                   # разделитель
 
 h1 += 10                                          # __iadd__
 print(h1)
-h1.pr_line()
+h1.pr_line()                                   # разделитель
 
 h2 = 10 + h2                                      # __radd__
 print(h2)
-h1.pr_line()
+h1.pr_line()                                   # разделитель
 
 print(h1 > h2) # __gt__
 print(h1 >= h2) # __ge__
