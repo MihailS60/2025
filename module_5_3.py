@@ -15,8 +15,6 @@ class House:
             print("\n","\033[33m","_" * 20,"\033[0m")
 
 
-    def pr_line(self):
-        print("\033[33m","_" * 20,"\033[0m")     # разделитель
 
     def __len__(self):
         return self.number_of_floors
@@ -90,6 +88,16 @@ class House:
 
 
 
+class Myclass():                             # разделитель
+    @staticmethod
+    def staticmethod():
+            print("\033[33m","_" * 20,"\033[0m")
+
+
+
+
+
+Myclass.staticmethod()          # разделитель
 #   неправильный выбор этажей :
 h1 = House('ЖК Горский', 18)
 print(f'объект {h1.name}, этажность {h1.number_of_floors}')
@@ -111,40 +119,41 @@ h2.go_to(2)
 
 # __str__
 print(h1,"\n",h2)
-h1.pr_line()                                   # разделитель
+Myclass.staticmethod()          # разделитель
 
 # __len__
 print(f'объект {h1.name} метод __len__',len(h1))
 print(f'объект {h2.name} метод __len__',len(h2))
 
 
-h1.pr_line()
+Myclass.staticmethod()          # разделитель
 h1 = House('ЖК Эльбрус', 10)
 h2 = House('ЖК Акация', 20)
 
 print(h1,"\n",h2)
-h1.pr_line()                                   # разделитель
+Myclass.staticmethod()          # разделитель
 
 print("метод __eq__  ", h1 == h2)                  # __eq__
-h1.pr_line()                                   # разделитель
+Myclass.staticmethod()          # разделитель
 
 add_floor=10
 h1 = h1 + add_floor                              # __add__
 print(h1)
-h1.pr_line()                                   # разделитель
+Myclass.staticmethod()          # разделитель
 print("метод __eq__  ", h1 == h2)                  # __eq__
-h1.pr_line()                                   # разделитель
+Myclass.staticmethod()          # разделитель
 
 h1 += 10                                          # __iadd__
 print(h1)
-h1.pr_line()                                   # разделитель
+Myclass.staticmethod()          # разделитель
 
 h2 = 10 + h2                                      # __radd__
 print(h2)
-h1.pr_line()                                   # разделитель
+Myclass.staticmethod()          # разделитель
 
 print(h1 > h2) # __gt__
 print(h1 >= h2) # __ge__
 print(h1 < h2) # __lt__
 print(h1 <= h2) # __le__
 print(h1 != h2) # __ne__
+
