@@ -88,7 +88,7 @@ class House:
 
 
 
-class Myclass():                             # разделитель
+class Myclass:                             # разделитель
     @staticmethod
     def staticmethod():
             print("\033[33m","_" * 20,"\033[0m")
